@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="BananaTalk.ChatRoom_Profile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BananaTalk"
+             mc:Ignorable="d" 
+             MouseEnter="UserControl_MouseEnter"
+             MouseLeave="UserControl_MouseLeave"
+             d:DesignHeight="70" d:DesignWidth="334">
+    <Grid x:Name="BG" Background="White">
+        <Rectangle x:Name="profile_image" Cursor="Hand" HorizontalAlignment="Left" Height="53" Margin="10,0,0,0" VerticalAlignment="Center" Width="53" RadiusY="20" RadiusX="20">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="BaseProfile.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="profile_nickname" HorizontalAlignment="Left" Margin="75,10,0,0" TextWrapping="Wrap" Text="집게사장님" VerticalAlignment="Top" RenderTransformOrigin="0.574,0.595" Width="141" FontWeight="Bold" FontSize="14"/>
+        <TextBlock x:Name="profile_time" HorizontalAlignment="Left" TextAlignment="Right" Margin="251,11,0,0" TextWrapping="Wrap" Text="오후 4:46" VerticalAlignment="Top" RenderTransformOrigin="0.574,0.595" Width="73" Foreground="#99000000" FontSize="11"/>
+        <TextBlock x:Name="profile_last_content" HorizontalAlignment="Left" Margin="75,32,0,0" TextWrapping="Wrap" Text="사장님 저 월급 주세요!" VerticalAlignment="Top" Height="30" Width="200" Foreground="#CC000000"/>
+
+    </Grid>
+</UserControl>

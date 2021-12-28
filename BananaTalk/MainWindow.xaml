@@ -1,0 +1,58 @@
+﻿<Window x:Class="BananaTalk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BananaTalk"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="600" Width="400" Icon="logo.jpg">
+    <Grid>
+        <Grid x:Name="ToolGrid" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="65" Background="#FFECECED">
+            <Border BorderBrush="#FFE7E7E8" BorderThickness="1" HorizontalAlignment="Right" Margin="0,0,-1,0"/>
+            <Grid x:Name="ToolGrid_ToolBar1" Height="140" Margin="0,46,0,0" VerticalAlignment="Top">
+                <Rectangle x:Name="ToolGrid_ToolBar1_Friend" Opacity="0.4" Cursor="Hand" MouseEnter="ToolGrid_ToolBar1_Friend_MouseEnter" MouseLeave="ToolGrid_ToolBar1_Friend_MouseLeave" MouseDown="ToolGrid_ToolBar1_Friend_MouseDown" HorizontalAlignment="Center" Height="21" Margin="0,0,0,0" VerticalAlignment="Top" Width="21">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Friends.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="ToolGrid_ToolBar1_Chatting" Opacity="1" Cursor="Hand" MouseEnter="ToolGrid_ToolBar1_Chatting_MouseEnter" MouseLeave="ToolGrid_ToolBar1_Chatting_MouseLeave" MouseDown="ToolGrid_ToolBar1_Chatting_MouseDown" HorizontalAlignment="Center"  Height="21" Margin="0,60,0,0" VerticalAlignment="Top" Width="21">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Chat.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+        </Grid>
+        <Grid x:Name="TopGrid" MouseDown="TopGrid_MouseDown" Height="30" Margin="65,0,0,0" VerticalAlignment="Top" Background="#00000000">
+            <Grid x:Name="TopGrid_ToolBar"  HorizontalAlignment="Right" Margin="0,0,10,0" Width="90" VerticalAlignment="Center" Height="10">
+                <Rectangle x:Name="Button_Close" MouseDown="Button_Close_MouseDown" MouseEnter="Tool_MouseEnter" MouseLeave="Tool_MouseLeave" HorizontalAlignment="Right" Opacity="0.2" Margin="0,0,0,0" Width="10">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="cancel.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+        </Grid>
+        <Grid x:Name="TaskGrid" Margin="66,30,0,0">
+            <Grid x:Name="FriendTab" Visibility="Hidden">
+                <Grid x:Name="FriendTab_ToolBar" Height="45" VerticalAlignment="Top">
+                    <TextBlock x:Name="FriendTab_Title" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="친구" VerticalAlignment="Center" Height="25" Width="59" FontSize="20" FontFamily="Segoe UI Black"/>
+                </Grid>
+                <local:Profile x:Name="FriendTab_Me" Height="65" Margin="0,45,0,0" VerticalAlignment="Top"/>
+                <Grid HorizontalAlignment="Left" Height="47" Margin="0,110,0,0" VerticalAlignment="Top" Width="334">
+                    <Border BorderBrush="#FFF2F2F2" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,7,0,0" VerticalAlignment="Top" Width="300"/>
+                    <TextBlock x:Name="FriendTab_FriendText" HorizontalAlignment="Left" Margin="28,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Foreground="#99000000" Text="친구  240"></TextBlock>
+                </Grid>
+                <Grid x:Name="FriendTab_Profiles" Margin="0,157,0,0"/>
+            </Grid>
+            <Grid x:Name="ChatTab" Visibility="Visible">
+                <Grid x:Name="ChatTab_ToolBar" Height="45" VerticalAlignment="Top">
+                    <TextBlock x:Name="ChatTab_ToolBar_Title" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="25" Width="59" FontSize="20" FontFamily="Segoe UI Black"><Run Text="채"/><Run Text="팅"/><LineBreak/><Run/></TextBlock>
+                </Grid>
+                <Grid x:Name="ChatTab_Chats" Margin="0,45,0,0"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
